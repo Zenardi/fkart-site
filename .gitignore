@@ -1,0 +1,76 @@
+# Arquivo gerado em 19/04/2025 para um projeto Vite + React + TypeScript
+
+# === Dependências ===
+# Pasta contendo todos os pacotes instalados via npm/yarn/pnpm
+node_modules/
+
+# === Logs ===
+# Arquivos de log gerados por npm, yarn, pnpm ou outras ferramentas
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# === Vite ===
+# Pasta de saída do build de produção
+dist/
+# Pasta de saída do build SSR (se aplicável)
+dist-ssr/
+# Diretório de cache do Vite (para otimizar o servidor de desenvolvimento)
+.vite/
+
+# === Arquivos de Ambiente ===
+# Ignora arquivos .env que podem conter chaves de API ou segredos.
+# Arquivos .env específicos de ambiente local não devem ir para o repositório.
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# === Arquivos do Sistema Operacional ===
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# === Arquivos de IDE / Editor ===
+# VSCode
+.vscode/*
+# Exceto arquivos de configuração compartilhados (opcional, remova se não usar)
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains (WebStorm, IntelliJ, etc.)
+.idea/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# === Testes e Cobertura ===
+# Arquivos gerados por ferramentas de teste e cobertura de código
+coverage/
+.nyc_output/
+
+# === Arquivos Temporários ou Gerados ===
+# Exemplo: Se você gerasse documentação automaticamente
+# docs/build
+
+# Exemplo: Arquivos de configuração específicos de máquina
+# config.local.js
