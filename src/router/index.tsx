@@ -9,6 +9,7 @@ import EventosCorporativosPage from '../pages/EventosCorporativosPage';
 import CalendarioPage from '../pages/CalendarioPage';
 import ContatoPage from '../pages/ContatoPage';
 import FotosTransmissaoPage from '../pages/FotosTransmissaoPage';
+import ResultadosPage from '../pages/ResultadosPage'; 
 // Importe outras páginas que criar
 
 const router = createBrowserRouter([
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: '/fotos-transmissao', // URL da página
         element: <FotosTransmissaoPage />, // Componente da página
+      },
+      {
+        path: '/resultados',
+        element: <ResultadosPage />,
       },
       {
         path: '/contato',

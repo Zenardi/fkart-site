@@ -57,6 +57,11 @@ export default function Navbar() {
         </Link>
       </Typography>
       <Typography as="li" variant="small" color="blue-gray" className="p-1 font-normal" placeholder={undefined}>
+        <Link to="/resultados" className="flex items-center hover:text-blue-500 transition-colors">
+          Resultados
+        </Link>
+      </Typography>
+      <Typography as="li" variant="small" color="blue-gray" className="p-1 font-normal" placeholder={undefined}>
         <Link to="/contato" className="flex items-center hover:text-blue-500 transition-colors">
           Contato
         </Link>
