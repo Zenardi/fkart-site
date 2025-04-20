@@ -2,6 +2,7 @@
 export interface Category {
     name: string;
     ballast: string; // Ex: "95kg", "100kg + 5kg tolerância"
+    pricePerStage?: number;
   }
   
   export interface Championship {
@@ -14,6 +15,7 @@ export interface Category {
     kartodromoLogoUrl?: string;
     categories: Category[];
     description?: string; // Opcional: Uma breve descrição
+    regulationsContent?: string;
   }
 
   export type EventStatus = 'Próximo' | 'Realizado' | 'Cancelado' | 'Adiado';
