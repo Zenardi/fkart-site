@@ -51,6 +51,16 @@ export default function Navbar() {
           Calendário
         </Link>
       </Typography>
+      <Typography as="li" variant="small" color="blue-gray" className="p-1 font-normal" placeholder={undefined}>
+        <Link to="/fotos-transmissao" className="flex items-center hover:text-blue-500 transition-colors">
+          Fotos e Transmissão
+        </Link>
+      </Typography>
+      <Typography as="li" variant="small" color="blue-gray" className="p-1 font-normal" placeholder={undefined}>
+        <Link to="/contato" className="flex items-center hover:text-blue-500 transition-colors">
+          Contato
+        </Link>
+      </Typography>
       {/* Adicione mais links aqui (Sobre, Contato, etc.) */}
     </ul>
   );

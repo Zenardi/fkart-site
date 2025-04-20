@@ -5,10 +5,11 @@ export const championshipsData: Championship[] = [
   {
     id: 'copa-fk-2025',
     name: 'Campeonato Kart Amador Fkart Champ KGV',
-    kartodromo: 'Kartódromo Internacional Granja Viana – São Paulo/SP (kart outdoor/rental kart)',
+    kartodromo: 'Kartódromo Granja Viana',
     location: 'São Paulo, SP',
     stages: 10,
-    imageUrl: '../assets/images/kgv/pista-panoramica.png', // Exemplo de caminho
+    imageUrl: '/images/kartodromos/kgv/logo.png', // Exemplo de caminho
+    kartodromoLogoUrl: '/images/kartodromos/kgv/logo.png',
     categories: [
       { name: 'Graduados', ballast: '95kg' },
       { name: 'Sênior', ballast: '100kg' },
@@ -18,16 +19,45 @@ export const championshipsData: Championship[] = [
   },
   {
     id: 'fk-endurance-series',
-    name: 'FK Endurance Series 2025',
+    name: 'Campeonato Kart Amador FKart Principal KGV',
     kartodromo: 'Kartódromo Granja Viana',
     location: 'Cotia, SP',
     stages: 5,
-    imageUrl: '../assets/images/kgv/pista-panoramica.png', // Exemplo de caminho
+    imageUrl: '/images/kartodromos/kgv/logo.png', // Exemplo de caminho
+    kartodromoLogoUrl: '/images/kartodromos/kgv/logo.png',
     categories: [
-      { name: 'Equipes Pro', ballast: 'Média 90kg/piloto' },
-      { name: 'Equipes Light', ballast: 'Média 98kg/piloto' },
+      { name: 'Equipes Pro', ballast: 'Média 90kg' },
+      { name: 'Equipes Light', ballast: 'Média 98kg' },
     ],
     description: 'Campeonato de longa duração focado em estratégia e trabalho em equipe.',
+  },
+  {
+    id: 'san-marino-1',
+    name: 'FKart San Marino Race',
+    kartodromo: 'Kartódromo San Marino',
+    location: 'Paulinia, SP',
+    stages: 5,
+    imageUrl: '/images/kartodromos/san-marino/logo.png', // Exemplo de caminho
+    kartodromoLogoUrl: '/images/kartodromos/san-marino/logo.png',
+    categories: [
+      { name: 'Equipes Pro', ballast: 'Média 90kg' },
+      { name: 'Equipes Light', ballast: 'Média 98kg' },
+    ],
+    description: 'Campeonato San Marino Race',
+  },
+  {
+    id: 'san-marino-1',
+    name: 'FKart San Marino Night',
+    kartodromo: 'Kartódromo San Marino',
+    location: 'Paulinia, SP',
+    stages: 5,
+    imageUrl: '/images/kartodromos/san-marino/logo.png', // Exemplo de caminho
+    kartodromoLogoUrl: '/images/kartodromos/san-marino/logo.png',
+    categories: [
+      { name: 'Equipes Pro', ballast: 'Média 90kg' },
+      { name: 'Equipes Light', ballast: 'Média 98kg' },
+    ],
+    description: 'Campeonato San Marino Night',
   },
   // Adicione mais campeonatos aqui
 ];

@@ -7,6 +7,8 @@ import ChampionshipDetailPage from '../pages/ChampionshipDetailPage';
 import GrupoFKRPage from '../pages/GrupoFKRPage';
 import EventosCorporativosPage from '../pages/EventosCorporativosPage';
 import CalendarioPage from '../pages/CalendarioPage';
+import ContatoPage from '../pages/ContatoPage';
+import FotosTransmissaoPage from '../pages/FotosTransmissaoPage';
 // Importe outras páginas que criar
 
 const router = createBrowserRouter([
@@ -24,21 +26,29 @@ const router = createBrowserRouter([
         element: <ChampionshipsListPage />,
       },
       {
-        // Rota dinâmica para detalhes do campeonato
+        
         path: 'campeonatos/:championshipId',
         element: <ChampionshipDetailPage />,
       },
-      { // <-- 2. Adicione a rota para a nova página
+      {
         path: '/grupo-fkr', // O caminho que aparecerá na URL (ex: seusite.com/grupo-fkr)
         element: <GrupoFKRPage />, // O componente que será renderizado
       },
-      { // <-- 2. Adicione a rota para Eventos Corporativos
+      { 
         path: '/eventos-corporativos', // O caminho na URL
         element: <EventosCorporativosPage />, // O componente a ser renderizado
       },
-      { // <-- 2. Adicione a rota do Calendário
+      {
         path: '/calendario',
         element: <CalendarioPage />,
+      },
+      {
+        path: '/fotos-transmissao', // URL da página
+        element: <FotosTransmissaoPage />, // Componente da página
+      },
+      {
+        path: '/contato',
+        element: <ContatoPage />,
       },
     ],
   },

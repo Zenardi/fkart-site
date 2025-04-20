@@ -11,6 +11,7 @@ export interface Category {
     location: string; // Cidade/Estado do kartódromo
     stages: number; // Quantidade de etapas
     imageUrl?: string; // Opcional: URL de uma imagem para o campeonato
+    kartodromoLogoUrl?: string;
     categories: Category[];
     description?: string; // Opcional: Uma breve descrição
   }
