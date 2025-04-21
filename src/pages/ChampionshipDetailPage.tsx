@@ -13,6 +13,8 @@ import {
 } from "@material-tailwind/react";
 import { format, parseISO } from "date-fns"; // <-- 2. Importar date-fns
 import { ptBR } from "date-fns/locale"; // <-- 2. Importar locale ptBR
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 const getStatusColor = (
   status: ChampionshipEvent["status"]
@@ -201,7 +203,7 @@ const ChampionshipDetailPage: React.FC = () => {
                     variant="outlined" // Estilo diferente para destacar
                     color="blue-gray"
                     size="sm"
-                    value={`Lastro Mínimo: ${category.ballast}`}
+                    value={`Lastro: ${category.ballast}`}
                     className="whitespace-nowrap border-blue-gray-200" // Borda sutil
                   />
                   {/* Preço (condicional) */}
@@ -362,8 +364,7 @@ const ChampionshipDetailPage: React.FC = () => {
         </Card>
       )}
 
-      {/* --- SEÇÃO REGULAMENTO (MODIFICADA PARA TEXTO) --- */}
-      {/* Renderiza a seção apenas se regulationsContent existir nos dados */}
+      {/* --- SEÇÃO REGULAMENTO (MODIFICADA PARA MARKDOWN) --- */}
       {championship.regulationsContent && (
         <Card placeholder={undefined} className="mb-6">
           <CardBody placeholder={undefined}>
@@ -376,18 +377,20 @@ const ChampionshipDetailPage: React.FC = () => {
             >
               Regulamento Oficial
             </Typography>
-            {/* Usar Typography com estilo CSS para preservar quebras de linha e espaços */}
-            <Typography
-              placeholder={undefined}
-              // A classe 'whitespace-pre-line' é chave aqui:
-              // - Preserva as quebras de linha (novas linhas) do texto original.
-              // - Compacta sequências de espaços em um único espaço.
-              // - Permite a quebra de linha automática do texto se ele for muito longo.
-              className="text-gray-800 leading-relaxed whitespace-pre-line text-sm md:text-base" // Tamanho de fonte ajustável
-            >
-              {championship.regulationsContent}{" "}
-              {/* Exibe o texto diretamente */}
-            </Typography>
+
+            {/* 2. Usar ReactMarkdown dentro de um div com classes 'prose' */}
+            <div className="prose prose-sm sm:prose-base max-w-none mt-4">
+              {/*
+                               'prose': Classe base do plugin @tailwindcss/typography
+                               'prose-sm sm:prose-base': Define tamanhos de fonte responsivos
+                               'max-w-none': Remove o limite de largura padrão do prose, útil dentro de um CardBody
+                            */}
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]} // Habilita tabelas, etc (opcional)
+              >
+                {championship.regulationsContent}
+              </ReactMarkdown>
+            </div>
           </CardBody>
         </Card>
       )}
