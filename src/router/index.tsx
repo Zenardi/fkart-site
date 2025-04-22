@@ -10,6 +10,7 @@ import CalendarioPage from '../pages/CalendarioPage';
 import ContatoPage from '../pages/ContatoPage';
 import FotosTransmissaoPage from '../pages/FotosTransmissaoPage';
 import ResultadosPage from '../pages/ResultadosPage'; 
+import AcademiaFKRPage from '../pages/AcademiaFKRPage';
 // Importe outras páginas que criar
 
 const router = createBrowserRouter([
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: '/resultados',
         element: <ResultadosPage />,
+      },
+      { 
+        path: '/academia-fkr', // URL
+        element: <AcademiaFKRPage />, // Componente
       },
       {
         path: '/contato',
