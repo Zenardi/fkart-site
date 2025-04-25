@@ -49,7 +49,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full bg-gray-100 p-8 mt-16 border-t border-blue-gray-100"> {/* Ajuste de estilo: bg, padding, margem superior, borda */}
+    <footer className="w-full bg-gray-900 p-8 mt-16 border-t-4 border-red-600"> {/* Ajuste de estilo: bg, padding, margem superior, borda */}
       <div className="container mx-auto flex flex-col items-center gap-y-6"> {/* Centraliza e adiciona espaçamento vertical */}
 
         {/* 3. Seção de Ícones Sociais */}
@@ -65,14 +65,14 @@ export default function Footer() {
               aria-label={link.label} // Para leitores de tela
             >
               {/* Renderiza o Ícone dinamicamente */}
-              <link.icon className={`w-6 h-6 text-gray-600 transition-colors duration-200 ${link.hoverColor}`} />
+              <link.icon className={`w-6 h-6 text-gray-400 transition-colors duration-200 ${link.hoverColor}`} />
             </a>
           ))}
         </div>
 
         {/* 4. Texto de Copyright */}
         <Typography
-          color="blue-gray"
+          color="white"
           className="text-center font-normal text-sm" // Ajustado tamanho da fonte
           placeholder={undefined} // Necessário por causa dos erros anteriores
         >
