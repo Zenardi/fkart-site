@@ -105,7 +105,7 @@ export default function Navbar() {
         </div>
       </div>
       {/* Collapse para mobile também precisa de fundo escuro */}
-      <Collapse open={openNav} className="bg-gray-900 text-white" placeholder={undefined}>
+      <Collapse open={openNav} className="bg-gray-900 text-white">
         {navList}
       </Collapse>
     </MTNavbar>
