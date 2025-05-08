@@ -419,10 +419,16 @@ export const championshipsData: Championship[] = [
     kartodromoLogoUrl: 'images/kartodromos/san-marino/logo.png', // Exemplo - Crie e adicione
     stages: 11, // Contado a partir dos eventos 'sm-series-25' (Fev a Nov)
     categories: [
-      // Nenhuma categoria específica foi mencionada para a série toda
-      { id: 'sm-geral-25', name: 'Geral', ballast: 'Não especificado', pricePerStage: undefined },
+      { id: 'sm-beg-25', name: 'Begginer', ballast: '90 KG', pricePerStage: 195.00 },
+      { id: 'sm-fet-25', name: 'Feater', ballast: '80 KG', pricePerStage: 195.00 },
+      { id: 'sm-str-25', name: 'Strong', ballast: '105 KG', pricePerStage: 195.00 },
+      { id: 'sm-eli-25', name: 'Elite', ballast: '90 KG', pricePerStage: 360.00 },
+      { id: 'sm-fas-25', name: 'Fast', ballast: '90 KG', pricePerStage: 260.00 },
+      { id: 'sm-lig-25', name: 'Light', ballast: '90 KG', pricePerStage: 220.00 },
+      { id: 'sm-nig-25', name: 'Night', ballast: '90 KG', pricePerStage: 290.00 },
     ],
     regulationsContent: `# Regulamento San Marino Series ${YEAR}\n\n(Conteúdo completo do regulamento aqui...)`,
+    entryPrice: 210.00
   },
 
   // --- Campeonatos Itu ---

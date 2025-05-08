@@ -162,6 +162,10 @@ const ChampionshipDetailPage: React.FC = () => {
                 {championship.description}
               </Typography>
             )}
+            <Typography placeholder={undefined}>
+              <span className="font-semibold">Inscricao no Campeonato:</span>{" "}
+              R$ {championship.entryPrice}
+            </Typography>
           </div>
         </CardBody>
       </Card>

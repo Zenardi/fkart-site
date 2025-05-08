@@ -75,6 +75,8 @@ export interface Championship {
 
   regulationsContent?: string; // Conteúdo do regulamento em texto/markdown
   // Alternativa: regulationsUrl?: string; // Link para PDF
+
+  entryPrice?: number
 }
 
 /**
