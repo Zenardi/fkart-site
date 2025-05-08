@@ -48,10 +48,11 @@ const router = createBrowserRouter([
         path: '/fotos-transmissao', // URL da página
         element: <FotosTransmissaoPage />, // Componente da página
       },
-      {
-        path: '/resultados',
-        element: <ResultadosPage />,
-      },
+      // Request backend
+      // {
+      //   path: '/resultados',
+      //   element: <ResultadosPage />,
+      // },
       { 
         path: '/academia-fkr', // URL
         element: <AcademiaFKRPage />, // Componente
