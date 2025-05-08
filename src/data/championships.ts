@@ -417,7 +417,7 @@ export const championshipsData: Championship[] = [
     kartodromo: 'Kartódromo San Marino',
     location: 'Paulínia, SP',
     kartodromoLogoUrl: 'images/kartodromos/san-marino/logo.png', // Exemplo - Crie e adicione
-    stages: 33, // Contado a partir dos eventos 'sm-series-25' (Fev a Nov)
+    stages: 11, // Contado a partir dos eventos 'sm-series-25' (Fev a Nov)
     categories: [
       // Nenhuma categoria específica foi mencionada para a série toda
       { id: 'sm-geral-25', name: 'Geral', ballast: 'Não especificado', pricePerStage: undefined },
