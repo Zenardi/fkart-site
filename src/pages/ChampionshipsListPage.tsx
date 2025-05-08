@@ -11,33 +11,11 @@ import {
 } from "@material-tailwind/react";
 import { championshipsData } from "../data/championships";
 import { Championship } from "../types";
-import kgvPistaImage from "../assets/images/kgv/pista-panoramica.png";
-import sanMarinoPistaImage from "../assets/images/san-marino/pista-panoramica.png";
-import kgvLogo from "../assets/images/kgv/kgv-logo.png";
 
 // Componente reutilizável para o card do campeonato
 const ChampionshipCard: React.FC<{ championship: Championship }> = ({
   championship,
 }) => {
-  let imageToDisplay: string;
-
-  // --- 2. Lógica para decidir qual imagem usar ---
-  // Verifique se este é o campeonato específico (ajuste o ID se necessário)
-  if (championship.kartodromo === "Kartódromo Granja Viana") {
-    // Ou use championship.id === 'id_do_campeonato_kgv'
-    imageToDisplay = kgvPistaImage;
-  } else if (championship.kartodromo === "Kartódromo San Marino") {
-    imageToDisplay = sanMarinoPistaImage;
-  } else if (championship.imageUrl) {
-    // Se não for o KGV mas tiver imageUrl, usa ela (assumindo que está na pasta /public)
-    imageToDisplay = championship.imageUrl.startsWith("/")
-      ? championship.imageUrl
-      : `/${championship.imageUrl}`;
-  } else {
-    // Se não for KGV e não tiver imageUrl, usa um placeholder
-    imageToDisplay = "https://via.placeholder.com/400x200?text=Sem+Imagem";
-  }
-
   return (
     <Card
       className="mt-6 w-full md:w-96 hover:shadow-lg transition-shadow duration-300"
@@ -49,7 +27,7 @@ const ChampionshipCard: React.FC<{ championship: Championship }> = ({
         placeholder={undefined}
       >
         <img
-          src={imageToDisplay} // <-- Usa a variável com a imagem correta
+          src={championship.imageUrl} // <-- Usa a variável com a imagem correta
           alt={`Imagem ${championship.name}`}
           className="h-full w-full object-cover"
         />

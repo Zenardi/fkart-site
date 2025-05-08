@@ -1,40 +1,26 @@
-// src/types/index.ts
 export interface Category {
-    name: string;
-    ballast: string; // Ex: "95kg", "100kg + 5kg tolerância"
-    pricePerStage?: number;
-  }
-  
-  export interface Championship {
-    id: string; // Identificador único para URL (ex: 'copa-force-kart-2025')
-    name: string; // Nome completo do campeonato
-    kartodromo: string; // Nome do kartódromo
-    location: string; // Cidade/Estado do kartódromo
-    stages: number; // Quantidade de etapas
-    imageUrl?: string; // Opcional: URL de uma imagem para o campeonato
-    kartodromoLogoUrl?: string;
-    categories: Category[];
-    description?: string; // Opcional: Uma breve descrição
-    regulationsContent?: string;
-  }
+  name: string;
+  ballast: string; // Ex: "95kg", "100kg + 5kg tolerância"
+  pricePerStage?: number;
+}
 
-  export type EventStatus = 'Próximo' | 'Realizado' | 'Cancelado' | 'Adiado';
+export type EventStatus = "Próximo" | "Realizado" | "Cancelado" | "Adiado";
 
-  export interface ChampionshipEvent {
-    id: string; // ID único para o evento (ex: 'copa-fk-2025-etapa-1')
-    championshipId: string; // ID do campeonato pai (ex: 'copa-fk-2025')
-    championshipName: string; // Nome do campeonato (para exibição fácil)
-    stage: number | string; // Número da etapa (ex: 1) ou nome especial (ex: "Qualifying Day")
-    date: string; // Data no formato ISO 8601 -> "YYYY-MM-DD" ou "YYYY-MM-DDTHH:mm:ssZ"
-    kartodromo: string; // Local específico da etapa
-    status?: EventStatus; // Status do evento
-    notes?: string; // Notas adicionais (opcional)
-  }
+export interface ChampionshipEvent {
+  id: string; // ID único para o evento (ex: 'copa-fk-2025-etapa-1')
+  championshipId: string; // ID do campeonato pai (ex: 'copa-fk-2025')
+  championshipName: string; // Nome do campeonato (para exibição fácil)
+  stage: number | string; // Número da etapa (ex: 1) ou nome especial (ex: "Qualifying Day")
+  date: string; // Data no formato ISO 8601 -> "YYYY-MM-DD" ou "YYYY-MM-DDTHH:mm:ssZ"
+  kartodromo: string; // Local específico da etapa
+  status?: EventStatus; // Status do evento
+  notes?: string; // Notas adicionais (opcional)
+}
 
 // --- Tipos Auxiliares ---
 
 /** Status possíveis para o pagamento de uma inscrição */
-export type PaymentStatus = 'Pendente' | 'Pago' | 'Isento' | 'Atrasado';
+export type PaymentStatus = "Pendente" | "Pago" | "Isento" | "Atrasado";
 
 // --- Interfaces das Entidades ---
 
@@ -173,14 +159,14 @@ export interface RaceResult {
  * (Poderia ser adicionado) Representa a classificação geral de um piloto em um campeonato/categoria.
  */
 export interface ChampionshipStanding {
-    id: string; // ID único da linha de classificação
-    championshipId: string;
-    categoryId: string;
-    driverId: string;
-    driverName: string; // Denormalizado para exibição
-    totalPoints: number;
-    position?: number; // Posição no ranking (calculada)
-    racesCompleted?: number; // Número de corridas que pontuou
-    victories?: number; // Número de vitórias
-    podiums?: number; // Número de pódios
+  id: string; // ID único da linha de classificação
+  championshipId: string;
+  categoryId: string;
+  driverId: string;
+  driverName: string; // Denormalizado para exibição
+  totalPoints: number;
+  position?: number; // Posição no ranking (calculada)
+  racesCompleted?: number; // Número de corridas que pontuou
+  victories?: number; // Número de vitórias
+  podiums?: number; // Número de pódios
 }

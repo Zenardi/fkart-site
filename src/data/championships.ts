@@ -1,5 +1,7 @@
 // src/data/championships.ts
-import { Championship } from '../types';
+import { Championship, Category } from '../types';
+
+const YEAR = 2025;
 
 // Exemplo de como ficaria (substitua pelo texto real)
 const regulamentoCopaFK2025 = `
@@ -337,71 +339,137 @@ Desejamos a todos um excelente campeonato, com muita diversão, respeito e veloc
 
 
 export const championshipsData: Championship[] = [
+  // --- Campeonatos KGV ---
   {
-    id: 'copa-fk-2025',
-    name: 'Campeonato Kart Amador Fkart Champ KGV',
-    kartodromo: 'Kartódromo Granja Viana',
-    location: 'São Paulo, SP',
-    stages: 10,
-    imageUrl: '/images/kartodromos/kgv/logo.png', // Exemplo de caminho
-    kartodromoLogoUrl: '/images/kartodromos/kgv/logo.png',
-    categories: [
-      { name: 'Graduados', ballast: '95kg'},
-      { name: 'Sênior', ballast: '100kg'},
-      { name: 'Super Sênior', ballast: '105kg'},
-    ],
-    regulationsContent: regulamentoCopaFK2025,
-    description: 'Inaugurado em outubro de 1996, o Kartódromo Internacional Granja Viana (KGV), em Cotia-SP, conta com uma ampla estrutura de 48 mil m2. É considerada uma das melhores pistas de kart da América do Sul, homologada com categoria “Internacional” pela Federação Internacional de Automobilismo (FIA), devido a sua infraestrutura de alto nível e aos importantes eventos que sedia.',
-  },
-  {
-    id: 'fk-endurance-series',
-    name: 'Campeonato Kart Amador FKart Principal KGV',
+    id: 'copa-kgv-25',
+    year: YEAR,
+    name: `Copa KGV ${YEAR}`,
+    description: `Tradicional copa de velocidade realizada no Kartódromo Granja Viana (${YEAR}).`,
+    imageUrl: 'images/kartodromos/kgv/panoramica.png', // Exemplo - Crie a imagem e coloque em /public
     kartodromo: 'Kartódromo Granja Viana',
     location: 'Cotia, SP',
-    stages: 5,
-    imageUrl: '/images/kartodromos/kgv/logo.png', // Exemplo de caminho
+    kartodromoLogoUrl: '/images/kartodromos/kgv/logo.png', // Exemplo - Verifique se existe em /public
+    stages: 8, // Contado a partir dos eventos 'copa-kgv-25' em calendarEventsData (Fev a Nov + QDay)
+    categories: [
+      { id: 'copa-kgv-light-25', name: 'Light', ballast: '90kg', pricePerStage: 230 },
+      { id: 'copa-kgv-beginner-25', name: 'Beginner', ballast: '90kg', pricePerStage: 230 },
+      { id: 'copa-kgv-master-25', name: 'Master', ballast: '95kg', pricePerStage: 230 },
+      // Preço convidado (R$195) e 2 corridas (R$420) precisam ser tratados na lógica de inscrição/pagamento,
+      // não cabem diretamente aqui como categoria separada de preço fixo.
+    ],
+    regulationsContent: `# Regulamento Copa KGV ${YEAR}\n\n(Conteúdo completo do regulamento aqui...) \n\n**Valores:**\n- R$ 230,00 Uma corrida\n- R$ 420,00 Duas corridas\n- R$ 195,00 Convidados (sem premiação)`,
+  },
+  {
+    id: 'oldschool-acka-25',
+    year: YEAR,
+    name: `Old School / Desafio ACKA ${YEAR}`,
+    description: `Eventos noturnos quinzenais no KGV com foco na experiência Pilotech (${YEAR}).`,
+    imageUrl: 'images/kartodromos/kgv/panoramica.png', // Exemplo
+    kartodromo: 'Kartódromo Granja Viana',
+    location: 'Cotia, SP',
     kartodromoLogoUrl: '/images/kartodromos/kgv/logo.png',
+    stages: 9, // Contado a partir dos eventos 'oldschool-acka-25'
     categories: [
-      { name: 'Categoria Pro', ballast: '90kg', pricePerStage: 100 },
-      { name: 'Categoria Light', ballast: '98kg', pricePerStage: 100 },
+      { id: 'oldschool-acka-cat-25', name: 'Geral', ballast: '95kg', pricePerStage: 230 },
+      // O preço de convidado (R$200) também seria tratado na inscrição.
     ],
-    regulationsContent: regulamentoEnduranceFK2025,
-    description: 'Campeonato de longa duração focado em estratégia e trabalho em equipe.',
+    regulationsContent: `# Regulamento Old School / Desafio ACKA ${YEAR}\n\n(Conteúdo completo do regulamento aqui...)\n\n**Valores:**\n- R$ 230,00\n- Convidado (sem premiação): R$ 200,00\n\n**Desafio ACKA Pilotech:**\n- Challenger 1: R$ 265,00\n- Challenger 2: R$ 240,00`,
   },
   {
-    id: 'san-marino-1',
-    name: 'FKart San Marino Race',
-    kartodromo: 'Kartódromo San Marino',
-    location: 'Paulinia, SP',
-    stages: 5,
-    imageUrl: '/images/kartodromos/san-marino/logo.png', // Exemplo de caminho
-    kartodromoLogoUrl: '/images/kartodromos/san-marino/logo.png',
+    id: 'endurance-kgv-25',
+    year: YEAR,
+    name: `Endurance KGV ${YEAR}`,
+    description: `Provas de longa duração no Kartódromo Granja Viana (${YEAR}).`,
+    imageUrl: 'images/kartodromos/kgv/panoramica.png', // Exemplo
+    kartodromo: 'Kartódromo Granja Viana',
+    location: 'Cotia, SP',
+    kartodromoLogoUrl: '/images/kartodromos/kgv/logo.png',
+    stages: 3, // Contado a partir dos eventos 'endurance-kgv-25'
     categories: [
-      { name: 'Categoria Pro', ballast: '90kg', pricePerStage: 100 },
-      { name: 'Categoria Light', ballast: '98kg', pricePerStage: 100 },
+      // Nenhuma categoria específica foi mencionada para Endurance KGV no texto
+      { id: 'endurance-kgv-geral-25', name: 'Equipes (Geral)', ballast: 'Não especificado', pricePerStage: undefined },
     ],
-    regulationsContent: regulamentoEnduranceFK2025,
-    description: 'Campeonato San Marino Race',
+    regulationsContent: `# Regulamento Endurance KGV ${YEAR}\n\n(Conteúdo completo do regulamento aqui...)`,
+  },
+   {
+    id: '500-milhas-kgv-25',
+    year: YEAR,
+    name: `500 Milhas KGV ${YEAR}`,
+    description: `Tradicional prova de 500 milhas no Kartódromo Granja Viana (${YEAR}).`,
+    imageUrl: 'images/kartodromos/kgv/panoramica.png', // Exemplo
+    kartodromo: 'Kartódromo Granja Viana',
+    location: 'Cotia, SP',
+    kartodromoLogoUrl: '/images/kartodromos/kgv/logo.png',
+    stages: 2, // Contado a partir dos eventos '500-milhas-kgv-25' (Normal e Pro)
+    categories: [
+      { id: '500-milhas-geral-25', name: 'Geral / Pro', ballast: 'Não especificado', pricePerStage: undefined },
+    ],
+    regulationsContent: `# Regulamento 500 Milhas KGV ${YEAR}\n\n(Conteúdo completo do regulamento aqui...)`,
+  },
+
+  // --- Campeonatos San Marino ---
+  {
+    id: 'sm-series-25',
+    year: YEAR,
+    name: `San Marino Series ${YEAR}`,
+    description: `Série completa de eventos variados no Kartódromo San Marino (${YEAR}), incluindo Night Race, Race Day, Endurance e mais.`,
+    imageUrl: '/images/kartodromos/san-marino/panoramica.png', // Exemplo
+    kartodromo: 'Kartódromo San Marino',
+    location: 'Paulínia, SP',
+    kartodromoLogoUrl: 'images/kartodromos/san-marino/logo.png', // Exemplo - Crie e adicione
+    stages: 33, // Contado a partir dos eventos 'sm-series-25' (Fev a Nov)
+    categories: [
+      // Nenhuma categoria específica foi mencionada para a série toda
+      { id: 'sm-geral-25', name: 'Geral', ballast: 'Não especificado', pricePerStage: undefined },
+    ],
+    regulationsContent: `# Regulamento San Marino Series ${YEAR}\n\n(Conteúdo completo do regulamento aqui...)`,
+  },
+
+  // --- Campeonatos Itu ---
+  {
+    id: 'copa-itu-geral-25',
+    year: YEAR,
+    name: `Copa Itu ${YEAR}`,
+    description: `Campeonato principal realizado no Kartódromo de Itu (${YEAR}).`,
+    imageUrl: 'images/kartodromos/itu/panoramica.png', // Exemplo
+    kartodromo: 'Kartódromo de Itu', // Arena Itu? Verificar nome oficial
+    location: 'Itu, SP',
+    kartodromoLogoUrl: '/images/kartodromos/itu/logo.png', // Exemplo - Crie e adicione
+    stages: 7, // Contado a partir dos eventos 'copa-itu-geral-25'
+    categories: [
+      // Categoria Elite/Convidados mencionada em 'Copa Itu Kids', aplicar aqui também?
+      // Vamos assumir que sim para ter algo, mas precisa confirmar.
+       { id: 'itu-geral-elite-25', name: 'Elite', ballast: '80kg', pricePerStage: undefined }, // Preço não claro para geral
+       { id: 'itu-geral-convidado-25', name: 'Convidados', ballast: '95kg', pricePerStage: 195 },
+    ],
+    regulationsContent: `# Regulamento Copa Itu ${YEAR}\n\n(Conteúdo completo do regulamento aqui...)`,
   },
   {
-    id: 'san-marino-1',
-    name: 'FKart San Marino Night',
-    kartodromo: 'Kartódromo San Marino',
-    location: 'Paulinia, SP',
-    stages: 5,
-    imageUrl: '/images/kartodromos/san-marino/logo.png', // Exemplo de caminho
-    kartodromoLogoUrl: '/images/kartodromos/san-marino/logo.png',
+    id: 'copa-itu-kids-25',
+    year: YEAR,
+    name: `Copa Itu Kids ${YEAR}`,
+    description: `Eventos e treinos voltados para o público infantil e juvenil no Kartódromo de Itu (${YEAR}).`,
+    imageUrl: 'images/kartodromos/itu/panoramica.png', // Exemplo
+    kartodromo: 'Kartódromo de Itu', // Arena Itu? Verificar nome oficial
+    location: 'Itu, SP',
+    kartodromoLogoUrl: 'images/kartodromos/itu/logo.png',
+    stages: 3, // Contado a partir dos eventos 'copa-itu-kids-25' (Abertura, Pais, Endurance Pais) - verificar se é isso mesmo
     categories: [
-      { name: 'Categoria Pro', ballast: '90kg', pricePerStage: 100 },
-      { name: 'Categoria Light', ballast: '98kg', pricePerStage: 100 },
+       // Os valores parecem misturar inscrição/curso com preço de corrida
+       // Separando o que parece ser categoria de corrida:
+       { id: 'itu-kids-6-12-25', name: 'Kids (6-12 anos)', ballast: 'Não aplicável', pricePerStage: 275 }, // Assumindo R$275,00 por evento/corrida
+       { id: 'itu-kids-13-17-25', name: 'Junior (13-17 anos)', ballast: 'Não aplicável', pricePerStage: 240 },
+       { id: 'itu-kids-pais-25', name: 'Pais/Convidados', ballast: '95kg', pricePerStage: 195 }, // Incluindo pais aqui
+       // A categoria 'Elite 80kg' do texto Markdown parece mais ligada à Copa Itu Geral
+       // O curso de R$90 é separado.
     ],
-    regulationsContent: regulamentoEnduranceFK2025,
-    description: 'Campeonato San Marino Night',
+    regulationsContent: `# Regulamento Copa Itu Kids ${YEAR}\n\n(Conteúdo completo do regulamento aqui...)\n\n**Valores Adicionais:**\n- Curso iniciante: R$ 90,00`,
   },
-  // Adicione mais campeonatos aqui
+
 ];
 
-// Função auxiliar para buscar um campeonato pelo ID
+// Função getChampionshipById (Mantida para a página de detalhes)
 export const getChampionshipById = (id: string): Championship | undefined => {
+  // Pode precisar ajustar para buscar no array championshipsMock se ele for a fonte única
   return championshipsData.find(champ => champ.id === id);
 }

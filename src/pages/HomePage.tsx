@@ -22,6 +22,7 @@ import carouselImg2 from "../assets/images/carousel-home/trofeus2.jpg";
 import carouselImg3 from "../assets/images/carousel-home/karts-sm.jpg";
 import carouselImg4 from "../assets/images/carousel-home/sm-kart-01.jpg";
 import carouselImg5 from "../assets/images/carousel-home/sm-fark-02.jpg";
+import { championshipsData } from "../data/championships";
 
 const HomePage: React.FC = () => {
   return (
@@ -175,233 +176,73 @@ const HomePage: React.FC = () => {
       {/* --- Fim do Carrossel --- */}
       {/* --- NOVA SEÇÃO: TIPOS DE CAMPEONATOS --- */}
       <section className="py-20 bg-gradient-to-b from-white to-blue-gray-50 px-4">
-        {" "}
-        {/* Fundo gradiente suave e padding */}
-        <div className="container mx-auto">
-          <Typography
-            as="h2"
-            variant="h2"
-            color="blue-gray"
-            placeholder={undefined}
-            className="text-center mb-5 font-bold" // Título em negrito
-          >
-            NOSSOS CAMPEONATOS DE KART AMADOR
-          </Typography>
-          <Typography
-            color="gray"
-            placeholder={undefined}
-            className="text-center mb-5 text-lg max-w-3xl mx-auto"
-          >
-            A Fkart é uma empresa de eventos organizadora de diversos formatos
-            de Campeonato de Kart Amador, visando atender a todos os níveis de
-            pilotos e dentro da necessidade de cada um deles.
-          </Typography>
-          <Typography
-            color="gray"
-            placeholder={undefined}
-            className="text-center mb-16 text-lg max-w-3xl mx-auto"
-          >
-            {" "}
-            {/* Aumentei margem inferior */}
-            Nossos campeonatos ocorrem tanto durante a semana quanto aos finais
-            de semana. Conheça as opções:
-          </Typography>
-          {/* Grid para os cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {" "}
-            {/* Aumentei o gap */}
-            {/* Card 1: Happy Hour */}
-            <Card
-              shadow={true}
-              className="border border-gray-200 hover:shadow-lg transition-shadow"
-              placeholder={undefined}
-            >
-              <CardBody className="text-center p-8" placeholder={undefined}>
-                {" "}
-                {/* Aumentei padding */}
-                <FaBeer className="w-12 h-12 text-amber-700 mx-auto mb-5" />{" "}
-                {/* Ícone */}
-                <Typography
-                  as="h5"
-                  variant="h5"
-                  color="blue-gray"
-                  placeholder={undefined}
-                  className="mb-3 font-semibold"
-                >
-                  Fkart Happy Hour
-                </Typography>
-                <Typography
-                  placeholder={undefined}
-                  className="text-sm font-normal text-gray-600"
-                >
-                  Competições quinzenais durante a semana, em kartódromos
-                  variados, ideal para relaxar após o trabalho e acelerar com os
-                  amigos.
-                </Typography>
-              </CardBody>
-            </Card>
-            {/* Card 2: Principal / Champ / Strong */}
-            <Card
-              shadow={true}
-              className="border border-gray-200 hover:shadow-lg transition-shadow"
-              placeholder={undefined}
-            >
-              <CardBody className="text-center p-8" placeholder={undefined}>
-                <FaTrophy className="w-12 h-12 text-yellow-800 mx-auto mb-5" />{" "}
-                {/* Ícone */}
-                <Typography
-                  as="h5"
-                  variant="h5"
-                  color="blue-gray"
-                  placeholder={undefined}
-                  className="mb-3 font-semibold"
-                >
-                  FKart Principal / Champ / Strong
-                </Typography>
-                <Typography
-                  placeholder={undefined}
-                  className="text-sm font-normal text-gray-600"
-                >
-                  Campeonatos mensais aos finais de semana, 12 etapas anuais com
-                  categorias por nível. Pura competitividade e disputas
-                  acirradas.
-                </Typography>
-              </CardBody>
-            </Card>
-            {/* Card 3: San Marino Race */}
-            <Card
-              shadow={true}
-              className="border border-gray-200 hover:shadow-lg transition-shadow"
-              placeholder={undefined}
-            >
-              <CardBody className="text-center p-8" placeholder={undefined}>
-                <FaMapMarkedAlt className="w-12 h-12 text-red-700 mx-auto mb-5" />{" "}
-                {/* Ícone */}
-                <Typography
-                  as="h5"
-                  variant="h5"
-                  color="blue-gray"
-                  placeholder={undefined}
-                  className="mb-3 font-semibold"
-                >
-                  Fkart San Marino Race
-                </Typography>
-                <Typography
-                  placeholder={undefined}
-                  className="text-sm font-normal text-gray-600"
-                >
-                  Campeonato oficial em Paulínia-SP, aos Domingos, 11 etapas
-                  anuais com diversas categorias e a melhor premiação do
-                  interior!
-                </Typography>
-              </CardBody>
-            </Card>
-            {/* Card 4: Endurance */}
-            <Card
-              shadow={true}
-              className="border border-gray-200 hover:shadow-lg transition-shadow"
-              placeholder={undefined}
-            >
-              <CardBody className="text-center p-8" placeholder={undefined}>
-                <FaUsers className="w-12 h-12 text-cyan-700 mx-auto mb-5" />{" "}
-                {/* Ícone */}
-                <Typography
-                  as="h5"
-                  variant="h5"
-                  color="blue-gray"
-                  placeholder={undefined}
-                  className="mb-3 font-semibold"
-                >
-                  Endurance (Individual e Equipes)
-                </Typography>
-                <Typography
-                  placeholder={undefined}
-                  className="text-sm font-normal text-gray-600"
-                >
-                  Provas de longa duração que testam habilidade, físico e
-                  estratégia. Corridas de 3 a 6 horas em equipe e desafios
-                  individuais.
-                </Typography>
-              </CardBody>
-            </Card>
-            {/* Card 5: Torneios Especiais */}
-            {/* No grid de 3 colunas, estes 2 últimos podem ficar centralizados se quiser (usando flex) ou apenas alinhados à esquerda */}
-            <Card
-              shadow={true}
-              className="border border-gray-200 hover:shadow-lg transition-shadow"
-              placeholder={undefined}
-            >
-              <CardBody className="text-center p-8" placeholder={undefined}>
-                <FaStar className="w-12 h-12 text-indigo-700 mx-auto mb-5" />{" "}
-                {/* Ícone */}
-                <Typography
-                  as="h5"
-                  variant="h5"
-                  color="blue-gray"
-                  placeholder={undefined}
-                  className="mb-3 font-semibold"
-                >
-                  Torneios Especiais
-                </Typography>
-                <Typography
-                  placeholder={undefined}
-                  className="text-sm font-normal text-gray-600"
-                >
-                  Eventos únicos, reais e virtuais, em datas selecionadas.
-                  Premiações diferenciadas, incluindo experiências em outras
-                  categorias.
-                </Typography>
-              </CardBody>
-            </Card>
-            {/* Card Extra (Exemplo - Link para Campeonatos) */}
-            {/* Poderia ser um card chamando para a página principal de campeonatos */}
-            <Card
-              shadow={true}
-              className="border border-gray-200 hover:shadow-lg transition-shadow bg-blue-gray-800 text-white flex flex-col justify-center"
-              placeholder={undefined}
-            >
-              <CardBody className="text-center p-8" placeholder={undefined}>
-                <FaFlagCheckered className="w-12 h-12 text-white mx-auto mb-5" />
-                <Typography
-                  as="h5"
-                  variant="h5"
-                  color="white"
-                  placeholder={undefined}
-                  className="mb-3 font-semibold"
-                >
-                  Veja Todos os Detalhes
-                </Typography>
-                <Typography
-                  placeholder={undefined}
-                  className="text-sm font-normal text-blue-gray-100 mb-4"
-                >
-                  Explore cada campeonato, veja calendários, regulamentos e
-                  muito mais.
-                </Typography>
-                <Link to="/campeonatos">
-                  <Button
-                    variant="gradient"
-                    color="white"
-                    placeholder={undefined}
-                  >
-                    Ver Campeonatos
-                  </Button>
-                </Link>
-              </CardBody>
-            </Card>
-          </div>{" "}
-          {/* Fim do grid */}
-          {/* Você pode adicionar um botão aqui para levar para a página de campeonatos */}
-          {/* Exemplo:
-             <div className="text-center mt-16">
-                 <Link to="/campeonatos">
-                     <Button color="blue" size="lg" placeholder={undefined}>Ver Detalhes dos Campeonatos</Button>
-                 </Link>
-             </div>
-          */}
-        </div>{" "}
-        {/* Fim do container */}
-      </section>
+                <div className="container mx-auto">
+                    <Typography
+                        as="h2"
+                        variant="h2"
+                        color="blue-gray"
+                        placeholder={undefined}
+                        className="text-center mb-5 font-bold"
+                    >
+                        {/* Título Atualizado */}
+                        CAMPEONATOS FKART {new Date().getFullYear()}
+                    </Typography>
+                    {/* Texto Introdutório Atualizado */}
+                    <Typography color="gray" placeholder={undefined} className="text-center mb-16 text-lg max-w-3xl mx-auto">
+                        Seja você um iniciante ou piloto experiente, temos o campeonato certo! Explore nossas competições atuais e encontre a sua turma para acelerar.
+                    </Typography>
+
+                    {/* Grid para os cards dos CAMPEONATOS REAIS */}
+                    {championshipsData.length > 0 ? (
+                        // 2. Grid que agora mapeia os dados importados
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"> {/* Ajustei para xl:grid-cols-4, ajuste conforme o número de campeonatos */}
+                            {championshipsData.map((champ) => (
+                                <Card
+                                    key={champ.id} // Chave única para o map
+                                    shadow={true}
+                                    className="border border-gray-200 flex flex-col hover:shadow-xl transition-shadow duration-300 ease-in-out" // Efeito hover + flex
+                                    placeholder={undefined}
+                                >
+                                    {/* Opcional: Imagem no topo do Card */}
+                                    {champ.imageUrl && (
+                                        <img
+                                            src={champ.imageUrl}
+                                            alt={`Imagem ${champ.name}`}
+                                            className="h-40 w-full object-cover rounded-t-lg" // Imagem com altura fixa
+                                        />
+                                    )}
+                                    <CardBody className="text-center p-6 flex-grow flex flex-col" placeholder={undefined}> {/* flex-grow para ocupar espaço, flex-col para alinhar botão */}
+                                        {/* Ícone (usando um genérico aqui) */}
+                                        <FaFlagCheckered className="w-10 h-10 text-red-600 mx-auto mb-4" />
+                                        {/* Nome do Campeonato */}
+                                        <Typography as="h5" variant="h5" color="blue-gray" placeholder={undefined} className="mb-2 font-semibold">
+                                            {champ.name}
+                                        </Typography>
+                                        {/* Descrição Curta ou Detalhes */}
+                                        <Typography placeholder={undefined} className="text-sm font-normal text-gray-600 mb-4 flex-grow"> {/* flex-grow para empurrar botão */}
+                                            {/* Usa a descrição do objeto, ou cria uma padrão */}
+                                            {champ.description || `${champ.stages} Etapas • ${champ.kartodromo}`}
+                                        </Typography>
+                                        {/* Botão Detalhes */}
+                                        <div className="mt-auto pt-4"> {/* Empurra botão para baixo */}
+                                            <Link to={`/campeonatos/${champ.id}`}>
+                                                <Button size="sm" variant="gradient" color="gray" fullWidth placeholder={undefined}>
+                                                    Ver Detalhes
+                                                </Button>
+                                            </Link>
+                                        </div>
+                                    </CardBody>
+                                </Card>
+                            ))}
+                        </div>
+                    ) : (
+                        // Mensagem caso não haja campeonatos nos dados
+                        <Typography color="gray" placeholder={undefined} className="text-center">
+                            Nenhum campeonato cadastrado no momento.
+                        </Typography>
+                    )}
+                </div> {/* Fim do container */}
+            </section>
       {/* --- FIM DA NOVA SEÇÃO --- */}
     </div>
   );

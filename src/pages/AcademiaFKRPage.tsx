@@ -158,7 +158,7 @@ const AcademiaFKRPage: React.FC = () => {
                ))}
             </div>
             <Typography variant="small" color="gray" placeholder={undefined} className="italic mb-6 text-center">
-              *Obs: Avaliar o custo de deslocamento para aulas fora do kartódromo base do coach.*
+              Obs: Avaliar o custo de deslocamento para aulas fora do kartódromo base do coach.
             </Typography>
 
             {/* Lista de Coaches */}
@@ -194,7 +194,7 @@ const AcademiaFKRPage: React.FC = () => {
              ))}
            </div>
             <Typography variant="small" color="gray" placeholder={undefined} className="italic mt-5 text-center">
-             *Valores de diária, podem variar. Consulte para detalhes e disponibilidade.*
+             Valores de diária podem variar. Consulte para detalhes e disponibilidade.
            </Typography>
          </CardBody>
       </Card>
