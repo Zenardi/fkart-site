@@ -115,3 +115,4 @@ export const standingsMock: ChampionshipStanding[] = [
     { championshipId: 'copa-fk-2024', categoryName: 'Sênior', pilotName: 'Michael Schumacher', totalPoints: 230 },
     { championshipId: 'copa-fk-2024', categoryName: 'Sênior', pilotName: 'Mika Hakkinen', totalPoints: 180 },
 ];
+
