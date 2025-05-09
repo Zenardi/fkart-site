@@ -71,7 +71,7 @@ const AcademiaFKRPage: React.FC = () => {
                      O QUE É?
                    </Typography>
                    <Typography placeholder={undefined} className='text-sm md:text-base'>
-                     A Escola Brasileira de Kart é um projeto que visa incentivar a entrada de novos pilotos no kartismo nacional... (texto completo)
+                     A Escola Brasileira de Kart é um projeto que visa incentivar a entrada de novos pilotos no kartismo nacional. Todo o material didático, assim como técnicas de ensino e procedimentos, seguirá à risca o que foi implantado na França e que gerou um grande sucesso chegando hoje a 38 escolas implementadas no país Europeu.
                    </Typography>
                  </section>
 
@@ -84,7 +84,8 @@ const AcademiaFKRPage: React.FC = () => {
                      O curso da Escola Brasileira de Kart foi baseado em quatro módulos: Primeiro Volante, Volante de Bronze, Volante de Prata, Volante de Ouro.
                    </Typography>
                    <Typography placeholder={undefined} className='text-sm md:text-base'>
-                     Em cada uma das aulas os pilotos serão submetidos ao aprendizado... receberão gratuitamente a primeira Filiação de Pilotos... (texto completo)
+                     Em cada uma das aulas os pilotos serão submetidos ao aprendizado de bandeiras, regras do esporte, noções do funcionamento do kart, motor, carburador, equipamentos de segurança pessoal e, finalmente, as aulas práticas na pista.
+                     Ao final de cada módulo os pilotos receberão o respectivo diploma e, finalmente, ao receberem o diploma do Volante de Ouro, estarão aptos a se inscreverem nas competições oficiais e receberão gratuitamente a primeira Filiação de Pilotos para participar dos Campeonatos Federados em todo o território Brasileiro.
                     </Typography>
                  </section>
 
