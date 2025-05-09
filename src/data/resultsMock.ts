@@ -1,5 +1,5 @@
 // src/data/resultsMock.ts
-import { Championship, Category, ChampionshipEvent } from '../types'; // Importe tipos existentes
+import { Championship, ChampionshipEvent } from '../types'; // Importe tipos existentes
 
 // Anos disponíveis
 export const availableYears: string[] = ['2025', '2024'];
@@ -18,8 +18,8 @@ export const championshipsMock: ChampionshipWithYear[] = [
     imageUrl: '/interlagos-track.jpg', kartodromoLogoUrl: '/images/kartodromos/logo-interlagos.png',
     regulationsContent: 'Regulamento...',
     categories: [
-        { name: 'Graduados', ballast: '95kg', pricePerStage: 100 },
-        { name: 'Sênior', ballast: '100kg', pricePerStage: 100 },
+        { id:"grad", name: 'Graduados', ballast: '95kg', pricePerStage: 100 },
+        { id: "sen", name: 'Sênior', ballast: '100kg', pricePerStage: 100 },
     ], description: 'Principal campeonato 2025.',
   },
   {
@@ -27,9 +27,9 @@ export const championshipsMock: ChampionshipWithYear[] = [
     kartodromo: 'Kartódromo Granja Viana', location: 'Cotia, SP', stages: 5,
     imageUrl: '/kgv-track.jpg', kartodromoLogoUrl: '/images/kartodromos/logo-kgv.png',
     regulationsContent: 'Regulamento Endurance...',
-    categories: [ { name: 'Light', ballast: 'Média 95kg', pricePerStage: 150 },
+    categories: [ { id: "lig", name: 'Light', ballast: 'Média 95kg', pricePerStage: 150 },
 
-        { name: 'Strong', ballast: 'Média 105kg', pricePerStage: 150 }
+        { id: "str", name: 'Strong', ballast: 'Média 105kg', pricePerStage: 150 }
     ],
     description: 'Endurance 2025.',
   },
@@ -39,8 +39,8 @@ export const championshipsMock: ChampionshipWithYear[] = [
     imageUrl: '/aldeia-track.jpg', kartodromoLogoUrl: '/images/kartodromos/logo-aldeia.png',
     regulationsContent: 'Regulamento 2024...',
     categories: [
-        { name: 'Graduados', ballast: '95kg', pricePerStage: 90 },
-        { name: 'Sênior', ballast: '100kg', pricePerStage: 90 },
+        { id: "grad", name: 'Graduados', ballast: '95kg', pricePerStage: 90 },
+        { id: "sen", name: 'Sênior', ballast: '100kg', pricePerStage: 90 },
     ], description: 'Principal campeonato 2024.',
   },
 ];
